@@ -31,4 +31,13 @@ describe("Unit Tests for the ExplorerController class", () => {
         expect( ExplorerController.applyFizzbuzz(5) ).toBe("BUZZ");
         expect( ExplorerController.applyFizzbuzz(15) ).toBe("FIZZBUZZ");
     });
+    
+    test("Method getResponseWhenApplyingFizzbuzzToMessage work", () => {
+        expect( ExplorerController.getResponseWhenApplyingFizzbuzzToMessage("1") ).toBe("Tu número es: 1. Validación: 1");
+        expect( ExplorerController.getResponseWhenApplyingFizzbuzzToMessage("3") ).toBe("Tu número es: 3. Validación: FIZZ");
+        expect( ExplorerController.getResponseWhenApplyingFizzbuzzToMessage("5") ).toBe("Tu número es: 5. Validación: BUZZ");
+        expect( ExplorerController.getResponseWhenApplyingFizzbuzzToMessage("15") ).toBe("Tu número es: 15. Validación: FIZZBUZZ");
+        expect( ExplorerController.getResponseWhenApplyingFizzbuzzToMessage("Hola") ).toBe("Envia un número válido");
+        expect( ExplorerController.getResponseWhenApplyingFizzbuzzToMessage(" ") ).toBe("Envia un número válido");
+    });
 });
