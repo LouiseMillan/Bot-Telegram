@@ -18,4 +18,9 @@ describe("Unit Tests for the ExplorerService class", () => {
         const names = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
         expect( names.every(item => typeof(item) === "string") ).toBe(true);
     });
+    
+    test("Method getExplorersNamesByMission work", () => {
+        const names = ExplorerService.getExplorersNamesByMission(explorers, "node");
+        expect( names.every(item => typeof(item) === "string") ).toBe(true);
+    });
 });

@@ -40,4 +40,8 @@ describe("Unit Tests for the ExplorerController class", () => {
         expect( ExplorerController.getResponseWhenApplyingFizzbuzzToMessage("Hola") ).toBe("Envia un número válido");
         expect( ExplorerController.getResponseWhenApplyingFizzbuzzToMessage(" ") ).toBe("Envia un número válido");
     });
+
+    test("Method getResponseToExplorerNamesInMission work", () => {
+        expect( typeof(ExplorerController.getResponseToExplorerNamesInMission()) === "string" ).toBe(true);
+    });
 });
