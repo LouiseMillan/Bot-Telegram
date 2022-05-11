@@ -24,4 +24,11 @@ describe("Unit Tests for the ExplorerController class", () => {
         const amountJavas = ExplorerController.getExplorersAmonutByMission("java");
         expect(amountJavas).toStrictEqual(expect.any(Number));
     });
+
+    test("Method applyFizzbuzz work", () => {
+        expect( ExplorerController.applyFizzbuzz(1) ).toBe(1);
+        expect( ExplorerController.applyFizzbuzz(3) ).toBe("FIZZ");
+        expect( ExplorerController.applyFizzbuzz(5) ).toBe("BUZZ");
+        expect( ExplorerController.applyFizzbuzz(15) ).toBe("FIZZBUZZ");
+    });
 });

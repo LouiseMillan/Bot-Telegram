@@ -1,6 +1,13 @@
 const FizzbuzzService = require("../../lib/services/FizzbuzzService");
 
 describe("Unit Tests for the FizzbuzzService class", () => {
+    test("Method applyValidationInNumber work", () => {
+        expect( FizzbuzzService.applyValidationInNumber(1) ).toBe(1);
+        expect( FizzbuzzService.applyValidationInNumber(3) ).toBe("FIZZ");
+        expect( FizzbuzzService.applyValidationInNumber(5) ).toBe("BUZZ");
+        expect( FizzbuzzService.applyValidationInNumber(15) ).toBe("FIZZBUZZ");
+    });
+
     test("Method applyValidationInExplorer work", () => {
         const explorer1 = {name: "Explorer1", score: 1};
         const explorer3 = {name: "Explorer3", score: 3};
